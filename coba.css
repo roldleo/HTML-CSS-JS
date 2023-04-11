@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Basic:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+
+body {
+  background-color: #05051b;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.back-background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1000;
+}
+.slider-name {
+  transition: 0.3s ease-in-out;
+}
+.slider-name:hover {
+  color: #ff5031;
+  transform: scale(150%);
+}
+.skill-agent {
+  margin-top: -50px;
+}
+.slider-active {
+  color: #ff5031;
+  transform: scale(150%);
+}
+.bg-agent {
+  position: absolute;
+  height: 70%;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+.bg-art {
+  position: absolute;
+  width: 650px;
+  bottom: -7%;
+  right: -7%;
+  z-index: -2;
+  /* transform: rotateY(180deg); */
+}
+.agent-name {
+  font-family: "Noto Serif Display", serif;
+  font-size: 5em;
+  font-weight: 700;
+}
+.agent-name:hover {
+  color: #ff5334;
+}
+.pic-skill {
+  width: auto;
+  height: 80px;
+  /* border: 1px solid white; */
+  transition: 0.2s ease-in-out;
+}
+.pic-skill:hover {
+  transform: scale(120%);
+  filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(20deg);
+}
+.skill-name {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  margin-left: 25%;
+  width: 50%;
+}
+.skill-desc {
+  font-family: "Gentium Basic", serif;
+  font-size: 13px;
+  margin-left: 25%;
+  width: 50%;
+}
+.role-name {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  font-weight: 400;
+}
+.logo-role {
+  width: 50px;
+  height: 50px;
+}
+.head-bio {
+  color: #ff5031;
+  text-shadow: 0 0 10px #ff5031;
+}
+.biography {
+  font-family: "Gentium Basic", serif;
+  font-style: italic;
+}
+.invert {
+  filter: invert(100%);
+}
+.white2red {
+  filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(30deg);
+  transform: scale(120%);
+}
+/* .aaaa {
+  filter: brightness(100%) sepia(1) saturate(10000%) invert(100%);
+} */
+
+.test-warna {
+  color: #be972a;
+}

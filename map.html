@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALORANT: Map</title>
+
+    <!-- fontello -->
+    <link rel="stylesheet" href="fontello.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="ico/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="ico/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="ico/-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="ico/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="ico/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="ico/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="ico/favicon-128.png" sizes="128x128" />
+
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+    />
+
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- My Css -->
+    <link rel="stylesheet" href="map.css" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="svgmap.css">
+  </head>
+  <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen size-modal">
+        <div class="modal-content bg-deepdark">
+          <div class="modal-header border-0">
+            <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <nav class="navbar navbar-light">
+            <div class="container d-block text-center">
+              <div class="modal-img-val"><img src="video/RED-valorant.png"></div>
+              <form class="d-flex justify-content-center">
+                <input
+                  style="border: none"
+                  class="modal-search form-control me-3"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  class="modal-search btn btn-outline-danger rounded-circle"
+                  type="submit"
+                  style="width: 45px; height: 45px"
+                >
+                  <i class="bi bi-arrow-right-short"></i>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Navbar -->
+    <nav
+      id="navv"
+      class="navbar navbar-expand-sm navbar-light bg-light fixed-top bg-transparant"
+    >
+      <div class="container">
+        <div class="navbar-left">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item ps-3 ">
+              <div class="item-nav">
+                <a class="nav-link active text-nv" aria-current="page" href="index.html">Home</a>
+              </div>
+              </li>
+          </ul>
+        </div>
+        <div class="navbar-right">
+          <ul class="navbar-nav mb-2 mb-lg-0 "> 
+            <div class="d-flex">
+              
+              <li class="nav-item pe-3" >
+                <div class="item-nav">
+                  <a class="text-nv nav-link" aria-current="page" href="agent.html"><i class="icon icon-agent pe-2"></i></i><a href="agent.html" class="text-nv-text">Agent</a></a>
+                </div>
+              </li>
+              <li class="nav-item pe-3" >
+                <div class="item-nav" >
+                  <a class="text-nv nav-link" aria-current="page" href="weapon.html"><i class="icon icon-weapon pe-2"></i><a href="weapon.html" class="text-nv-text">Weapon</a></a>
+                </div>
+              </li>
+              <li class="nav-item pe-3" >
+                <div class="item-nav" >
+                  <a class="text-nv nav-link" aria-current="page" href="#"><i class="icon icon-map"></i><a class="text-nv-text">Map</a></a>
+                </div>
+              </li>
+              <li class="nav-item pe-3">
+                <div class="item-nav" data-bs-target="#searchModal"
+                data-bs-toggle="modal">
+                  <a
+                    class="text-nv nav-link"
+                    aria-current="page"
+                    href="#"
+                    ><i class="icon bi bi-search pe-1"></i><a class="text-nv-text" href="#"data-bs-target="#searchModal"
+                    data-bs-toggle="modal">Search</a></a
+                  >
+                </div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Modal Map -->
+    <div
+      class="modal fade"
+      id="picMapModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-pic-map">
+        <img id="modalImage" class="modal-image" src="Weapon/operator.png" alt="" />
+      </div>
+    </div>
+    <!-- End Modal Map -->
+
+    <!-- MAP -->
+    <section class="map">
+      <div class="container-fluid">
+        <div class="row head-map justify-content-center ">
+          <div onclick="callBind()" class="col map-select bind text-center">BIND</div>
+          <div onclick="callBreeze()" class="col map-select breeze text-center">BREEZE</div>
+          <div onclick="callFracture()" class="col map-select fracture text-center">FRACTURE</div>
+          <div onclick="callAscent()" class="col map-select ascent text-center">ASCENT</div>
+          <div onclick="callSplit()" class="col map-select split text-center">SPLIT</div>
+          <div onclick="callIcebox()" class="col map-select icebox text-center">ICEBOX</div>
+          <div onclick="callHaven()" class="col map-select haven text-center">HAVEN</div>
+        </div>
+        <div id="mapContent" class="row map-picture mt-5">
+          <div id="mapContent" class="row map-picture mt-5">
+            <!-- <div class="bg-map animate__animated animate__fadeIn animate__slow">
+              <img src="map/haven.png" alt="">
+            </div>         
+            <div class="col-lg-6 map-image text-center animate__animated animate__fadeInLeft">
+                <img class="blind-map mt-5" src="map/blindmap/haven.png" alt="">
+            </div>
+            <div class="col-lg-6 d-flex text-desc text-start ps-5 animate__animated animate__fadeInRight">
+              <div class="col-6">
+                <p 
+                onclick="havenDS()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> Defender Spawn
+                </p>
+                <p 
+                onclick="havenCSite()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> C Site
+                </p>
+                <p 
+                onclick="havenCLink()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> C Link
+                </p>
+                <p 
+                onclick="havenBSite()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> B Site
+                </p>
+                <p 
+                onclick="havenCLong()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> C Long
+                </p>
+                <p 
+                onclick="havenCShort()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> C Short
+                </p>
+                <p 
+                onclick="havenCLobby()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> C Lobby
+                </p>
+              </div>
+              <div class="col-6">
+                <p 
+                onclick="havenAS()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> Attacker Spawn
+                </p>
+                <p 
+                onclick="havenMid()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> Mid
+                </p>
+                <p 
+                onclick="havenALobby()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> A Lobby
+                </p>
+                <p 
+                onclick="havenALong()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> A Long
+                </p>
+                <p 
+                onclick="havenSite()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> A Site
+                </p>
+                <p 
+                onclick="havenAShort()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> A Short
+                </p>
+                <p 
+                onclick="havenALink()"
+                data-bs-toggle="modal"
+                data-bs-target="#picMapModal"
+                >
+                  <i class="bi bi-info-circle-fill"></i> A Link
+                </p>
+              </div>
+            </div>  
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6 map-story animate__animated animate__fadeInUp">
+              <div class="story">//Story</div>
+              <div class="story-text">Beneath a forgotten monastery, a clamour emerges from rival Agents clashing to control three sites. There’s more territory to control, but defenders can use the extra real estate for aggressive pushes.</div>
+            </div> -->
+            <div class="bg-mapp animate__animated animate__fadeIn animate__slow">
+              <img class="bg-start" src="background/bg.png" alt="">
+              <div id="svgStart"></div>
+            </div>         
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End MAP -->
+
+    <!-- footer -->
+    <section class="footer mt-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="head-footer">About</div>
+            <div class="desc-footer">
+              Web ini dibuat untuk memenuhi Tugas Akhir Semester 3 Mata Kuliah Pengembangan Aplikasi WEB</div>
+          </div>
+          <div class="col-lg-4">
+            <div class="head-footer">Source</div>
+            <div class="desc-footer"><a href="playvalorant.com">playvalorant.com</a></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="head-footer">Contact</div>
+            <div class="desc-footer">
+              <a href="mailto:haroldleopanja@gmail.com">
+                <i class="bi bi-envelope-fill me-3"></i>haroldleopanja@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="footerclick()" class="col footer-dot justify-content-center text-center"><i class="bi bi-three-dots"></i></a></div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Boostrap Javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My Script -->
+    <script src="navbarFooter.js"></script>
+    <script src="map.js"></script>
+    <script src="svgmap.js"></script>
+  </body>
+</html>

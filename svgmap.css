@@ -1,0 +1,77 @@
+#Layer_1 {
+  stroke: white !important;
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: layer1 10s linear forwards infinite;
+}
+@keyframes layer1 {
+  0% {
+    stroke-dashoffset: 2500;
+    opacity: 100%;
+  }
+  40% {
+    stroke-dashoffset: 0;
+    opacity: 100%;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 0%;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0%;
+  }
+}
+#Layer_2 {
+  stroke: white !important;
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: layer2 10s linear forwards infinite;
+}
+@keyframes layer2 {
+  0% {
+    stroke-dashoffset: 2500;
+    opacity: 100%;
+  }
+  40% {
+    stroke-dashoffset: 2500;
+    opacity: 100%;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    opacity: 100%;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 0%;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0%;
+  }
+}
+#svgStart {
+  position: relative;
+  width: 103%;
+  height: auto;
+}
+
+.bg-start {
+  position: absolute;
+  width: 100%;
+  animation: bgstart 10s linear forwards infinite;
+}
+@keyframes bgstart {
+  0% {
+    opacity: 0%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
